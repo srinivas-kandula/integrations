@@ -1,0 +1,43 @@
+apiVersion: vmware.com/v1beta1
+kind: Wavefront
+metadata:
+  name: wavefront
+spec:
+  
+  # Default values copied from <project_dir>/helm-charts/wavefrontcollector/values.yaml
+  
+  # Default values for wavefrontcollector.
+  # This is a YAML-formatted file.
+  # Declare variables to be passed into your templates.
+  collector:
+    useProxy: false
+    kubernetesSource: kubernetes.summary_api:https://kubernetes.default.svc?useServiceAccount=true&kubeletHttps=true&kubeletPort=10250&insecure=true
+
+  clusterName: openshift-operator-collector-2
+  wavefront:
+    url: https://nimba.wavefront.com
+    token: a5818976-d96d-49ee-b5ee-d10549b14c81 
+  proxy:
+    enabled: false
+ 
+  nameOverride: ""
+  fullnameOverride: ""
+  
+  resources: {}
+    # We usually recommend not to specify default resources and to leave this as a conscious
+    # choice for the user. This also increases chances charts run on environments with little
+    # resources, such as Minikube. If you do want to specify resources, uncomment the following
+    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+    # limits:
+    #   cpu: 100m
+    #   memory: 128Mi
+    # requests:
+    #   cpu: 100m
+    #   memory: 128Mi
+  
+  nodeSelector: {}
+  
+  tolerations: []
+  
+  affinity: {}
+  

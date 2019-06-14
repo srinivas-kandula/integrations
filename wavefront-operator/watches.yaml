@@ -1,0 +1,5 @@
+---
+- version: v1beta1
+  group: vmware.com
+  kind: Wavefront
+  chart: /opt/helm/helm-charts/wavefront
