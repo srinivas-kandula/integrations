@@ -1,5 +1,5 @@
 ---
 - version: v1beta1
-  group: vmware.com
-  kind: Wavefront
+  group: wavefront.com
+  kind: WavefrontCollector
   chart: /opt/helm/helm-charts/wavefront

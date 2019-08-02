@@ -1,7 +1,7 @@
-apiVersion: vmware.com/v1beta1
-kind: Wavefront
+apiVersion: wavefront.com/v1beta1
+kind: WavefrontCollector
 metadata:
-  name: wavefront
+  name: wavefrontcollector
 spec:
   
   # Default values copied from <project_dir>/helm-charts/wavefrontcollector/values.yaml
@@ -13,10 +13,10 @@ spec:
     useProxy: false
     kubernetesSource: kubernetes.summary_api:https://kubernetes.default.svc?useServiceAccount=true&kubeletHttps=true&kubeletPort=10250&insecure=true
 
-  clusterName: openshift-operator-collector-2
+  clusterName: OPENSHIFT_CLUSTER_NAME
   wavefront:
-    url: https://nimba.wavefront.com
-    token: a5818976-d96d-49ee-b5ee-d10549b14c81 
+    url: https://YOUR_CLUSTER_NAME.wavefront.com
+    token: YOUR_API_TOKEN
   proxy:
     enabled: false
  
