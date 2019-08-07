@@ -19,7 +19,10 @@ spec:
     token: YOUR_API_TOKEN
   proxy:
     enabled: false
- 
+  # This flag should not be changed
+  openshift:
+    enabled: true
+
   nameOverride: ""
   fullnameOverride: ""
   

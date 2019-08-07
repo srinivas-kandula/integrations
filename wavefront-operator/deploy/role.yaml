@@ -25,15 +25,25 @@ rules:
 - apiGroups:
   - ""
   resources:
+  - events
   - namespaces
   - pods
   - nodes
+  - nodes/stats
   - services
   - serviceaccounts
   - configmaps
   - secrets
   verbs:
   - "*"
+- apiGroups:
+  - extensions
+  resources:
+  - deployments
+  verbs:
+  - get
+  - list
+  - watch
 - apiGroups:
   - apps
   resources:
@@ -47,3 +57,4 @@ rules:
   - clusterroles
   verbs:
   - "*"
+
